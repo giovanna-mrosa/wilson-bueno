@@ -1,9 +1,13 @@
-import styles from '../styles/Home.module.css'
+import Navbar from '../components/Navbar'
+import styles from '../styles/Home.module.scss'
 
 export default function Home() {
   return (
-    <div>
-      <h1>Cocô</h1>
-    </div>
+    <>
+      <Navbar />
+      <div>
+        <h1>Conteudo Principal</h1>
+      </div>
+    </>
   )
 }

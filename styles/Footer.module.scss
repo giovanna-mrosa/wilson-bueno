@@ -1,0 +1,41 @@
+.container {
+  width: 100%;
+  height: 280px;
+  padding: 35px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-image: url(../public/images/background-footer.jpg);
+  background-repeat: no-repeat;
+
+  .rowLogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 5%;
+  }
+
+  .rowRight {
+    padding-right: 5%;
+    display: flex;
+    gap: 200px;
+
+    .links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      
+      li a {
+        text-decoration: none;
+        color: #58585A;
+        font-weight: 700;
+      }
+    }
+
+    .mediasBox {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
