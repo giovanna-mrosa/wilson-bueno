@@ -49,7 +49,7 @@ export default function Footer() {
           </button>
           <button className={style.media}>
             <a 
-              href="/" 
+              href="https://wa.me/message/NZ25IHMNMB76B1" 
               target="_blank" 
               rel="noreferrer"
             >
