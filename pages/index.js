@@ -1,13 +1,12 @@
-import Navbar from '../components/Navbar'
+import SectionOne from '../components/SectionOne'
+import SectionTwo from '../components/SectionTwo'
 import style from '../styles/Home.module.scss'
 
 export default function Home() {
   return (
     <main className={style.main}>
-      <Navbar />
-      <div>
-        <h1>Conteudo Principal</h1>
-      </div>
+      <SectionOne />
+      <SectionTwo />
     </main>
   )
 }
