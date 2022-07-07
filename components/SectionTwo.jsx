@@ -12,6 +12,7 @@ export default function SectionTwo() {
           <Carousel
             itemsToShow={1}
             showArrows={false}
+            className={style.carousel}
           >
             <p>
             “Lorem ipsum dolor sit amet. Est quasi possimus sed
@@ -59,7 +60,7 @@ export default function SectionTwo() {
           height="596"
           alt="Map"
         />
-        <div className="where">
+        <div className={style.where}>
           <h3>Onde você encontra SynolisVA na minha rede</h3>
         </div>
       </div>
@@ -281,18 +282,20 @@ export default function SectionTwo() {
               id="name" 
               placeholder="Nome"
             />
-            <input 
-              type="email" 
-              name="email" 
-              id="email" 
-              placeholder="E-mail"
-            />
-             <input 
-              type="tel" 
-              name="tel" 
-              id="tel" 
-              placeholder="Telefone"
-            />
+            <div className={style.mailPhone}>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="E-mail"
+              />
+               <input
+                type="tel"
+                name="tel"
+                id="tel"
+                placeholder="Telefone"
+              />
+            </div>
             <textarea name="message" id="message" cols="30" rows="10" />
             <button type="submit">ENVIAR</button>
           </form>
