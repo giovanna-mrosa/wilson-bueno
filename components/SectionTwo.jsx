@@ -1,54 +1,98 @@
+import React, { useState } from 'react';
 import Image from "next/image"
-import Carousel from "react-elastic-carousel"
+import { useKeenSlider } from "keen-slider/react"
+import "keen-slider/keen-slider.min.css"
 
 import style from '../styles/SectionTwo.module.scss'
 
 export default function SectionTwo() {
+  const [sliderRef] = useKeenSlider(
+    {
+      loop: true,
+    },
+    [
+      (slider) => {
+        let timeout
+        let mouseOver = false
+        function clearNextTimeout() {
+          clearTimeout(timeout)
+        }
+        function nextTimeout() {
+          clearTimeout(timeout)
+          if (mouseOver) return
+          timeout = setTimeout(() => {
+            slider.next()
+          }, 5000)
+        }
+        slider.on("created", () => {
+          slider.container.addEventListener("mouseover", () => {
+            mouseOver = true
+            clearNextTimeout()
+          })
+          slider.container.addEventListener("mouseout", () => {
+            mouseOver = false
+            nextTimeout()
+          })
+          nextTimeout()
+        })
+        slider.on("dragStarted", clearNextTimeout)
+        slider.on("animationEnded", nextTimeout)
+        slider.on("updated", nextTimeout)
+      },
+    ],    
+  )
+
   return (
     <section className={style.sectionTwoBox}>
       <div className={style.columnOneSectionTwo}>
         <div className={style.testimony}>
           <h3>Depoimentos</h3>
-          <Carousel
-            itemsToShow={1}
-            showArrows={false}
-            className={style.carousel}
-          >
-            <p>
-            “Lorem ipsum dolor sit amet. Est quasi possimus sed
-            rerum quas quo consequatur quos voluptatem sequi est
-            voluptates prae sentium ut sunt quisquam non voluptas “ <br />
-            <br />
-            <span>Lorem Ipsum Dolor</span>
-            </p>
-            <p>
-            “Lorem ipsum dolor sit amet. Est quasi possimus sed
-            rerum quas quo consequatur quos voluptatem sequi est
-            voluptates prae sentium ut sunt quisquam non voluptas “ <br />
-            <br />
-            <span>Lorem Ipsum Dolor</span>
-            </p>
-            <p>
-            “Lorem ipsum dolor sit amet. Est quasi possimus sed
-            rerum quas quo consequatur quos voluptatem sequi est
-            voluptates prae sentium ut sunt quisquam non voluptas “ <br />
-            <br />
-            <span>Lorem Ipsum Dolor</span>
-            </p>
-            <p>
-            “Lorem ipsum dolor sit amet. Est quasi possimus sed
-            rerum quas quo consequatur quos voluptatem sequi est
-            voluptates prae sentium ut sunt quisquam non voluptas “ <br />
-            <br />
-            <span>Lorem Ipsum Dolor</span>
-            </p>
-          </Carousel>
+          <div className="carousel-wrapper">
+            <div ref={sliderRef} className="keen-slider">
+              <div className="keen-slider__slide">
+                <p>
+                  “Lorem ipsum dolor sit amet. Est quasi possimus sed
+                  rerum quas quo consequatur quos voluptatem sequi est
+                  voluptates prae sentium ut sunt quisquam non voluptas “ <br />
+                  <br />
+                  <span>Lorem Ipsum Dolor</span>
+                </p>
+              </div>
+              <div className="keen-slider__slide">
+                <p>
+                    “Lorem ipsum dolor sit amet. Est quasi possimus sed
+                    rerum quas quo consequatur quos voluptatem sequi est
+                    voluptates prae sentium ut sunt quisquam non voluptas “ <br />
+                    <br />
+                    <span>Lorem Ipsum Dolor</span>
+                  </p>
+              </div>
+              <div className="keen-slider__slide">
+                <p>
+                  “Lorem ipsum dolor sit amet. Est quasi possimus sed
+                  rerum quas quo consequatur quos voluptatem sequi est
+                  voluptates prae sentium ut sunt quisquam non voluptas “ <br />
+                  <br />
+                  <span>Lorem Ipsum Dolor</span>
+                </p>
+              </div>
+              <div className="keen-slider__slide">
+              <p>
+                “Lorem ipsum dolor sit amet. Est quasi possimus sed
+                rerum quas quo consequatur quos voluptatem sequi est
+                voluptates prae sentium ut sunt quisquam non voluptas “ <br />
+                <br />
+                <span>Lorem Ipsum Dolor</span>
+              </p>
+              </div>
+            </div>
+          </div>          
         </div>
         <div className={style.videoBox}>
           <Image
             src="/images/video.jpg"
-            width="690"
-            height="414"
+            width="616"
+            height="370"
             alt="Institutional Video"
           />
         </div>
@@ -82,192 +126,193 @@ export default function SectionTwo() {
               id="cities" 
               className={style.cities}
             >
-              <option value="">Águas de Lindóia</option>
-              <option value="">Águas de Santa Bárbara</option>
-              <option value="">Alambari</option>
-              <option value="">Alumínio</option>
-              <option value="">Americana</option>
-              <option value="">Amparo</option>
-              <option value="">Angatuba</option>
-              <option value="">Anhembi</option>
-              <option value="">Aparecida</option>
-              <option value="">Apiaí</option>
-              <option value="">Araçariguama</option>
-              <option value="">Araçoiaba da Serra</option>
-              <option value="">Arandu</option>
-              <option value="">Arapeí</option>
-              <option value="">Areias</option>
-              <option value="">Areiópolis</option>
-              <option value="">Artur Nogueira</option>
-              <option value="">Atibaia</option>
-              <option value="">Avaré</option>
-              <option value="">Bananal</option>
-              <option value="">Barão de Antonina</option>
-              <option value="">Barra do Chapéu</option>
-              <option value="">Barra do Turvo</option>
-              <option value="">Bofete</option>
-              <option value="">Boituva</option>
-              <option value="">Bom Jesus dos Perdões</option>
-              <option value="">Bom Sucesso de Itararé</option>
-              <option value="">Botucatu</option>
-              <option value="">Bragança Paulista</option>
-              <option value="">Buri</option>
-              <option value="">Cabreúva</option>
-              <option value="">Caçapava</option>
-              <option value="">Cachoeira Paulista</option>
-              <option value="">Cajati</option>
-              <option value="">Campina do Monte Alegre</option>
-              <option value="">Campinas</option>
-              <option value="">Campo Limpo Paulista</option>
-              <option value="">Campos do Jordão</option>
-              <option value="">Cananéia</option>
-              <option value="">Canas</option>
-              <option value="">Capão Bonito</option>
-              <option value="">Capela do Alto</option>
-              <option value="">Capivari</option>
-              <option value="">Caraguatatuba</option>
-              <option value="">Cerqueira César</option>
-              <option value="">Cerquilho</option>
-              <option value="">Cesário Lange</option>
-              <option value="">Conchas</option>
-              <option value="">Cordeirópolis</option>
-              <option value="">Coronel Macedo</option>
-              <option value="">Cosmópolis</option>
-              <option value="">Cruzeiro</option>
-              <option value="">Cunha</option>
-              <option value="">Eldorado</option>
-              <option value="">Elias Fausto</option>
-              <option value="">Engenheiro Coelho</option>
-              <option value="">Fartura</option>
-              <option value="">Guapiara</option>
-              <option value="">Guaratinguetá</option>
-              <option value="">Guareí</option>
-              <option value="">Holambra</option>
-              <option value="">Hortolândia</option>
-              <option value="">Iaras</option>
-              <option value="">Ibiúna</option>
-              <option value="">Igaratá</option>
-              <option value="">Iguape</option>
-              <option value="">Ilha Comprida</option>
-              <option value="">Ilhabela</option>
-              <option value="">Indaiatuba</option>
-              <option value="">Iperó</option>
-              <option value="">Iporanga</option>
-              <option value="">Iracemápolis</option>
-              <option value="">Itaberá</option>
-              <option value="">Itaí</option>
-              <option value="">Itaóca</option>
-              <option value="">Itapetininga</option>
-              <option value="">Itapeva</option>
-              <option value="">Itapira</option>
-              <option value="">Itapirapuã Paulista</option>
-              <option value="">Itaporanga</option>
-              <option value="">Itararé</option>
-              <option value="">Itariri</option>
-              <option value="">Itatiba</option>
-              <option value="">Itatinga</option>
-              <option value="">Itu</option>
-              <option value="">Itupeva</option>
-              <option value="">Jacareí</option>
-              <option value="">Jacupiranga</option>
-              <option value="">Jaguariúna</option>
-              <option value="">Jambeiro</option>
-              <option value="">Jarinú</option>
-              <option value="">Joanópolis</option>
-              <option value="">Jumirim</option>
-              <option value="">Jundiaí</option>
-              <option value="">Juquiá</option>
-              <option value="">Lagoinha</option>
-              <option value="">Laranjal Paulista</option>
-              <option value="">Lavrinhas</option>
-              <option value="">Limeira</option>
-              <option value="">Lindóia</option>
-              <option value="">Lorena</option>
-              <option value="">Louveira</option>
-              <option value="">Mairinque</option>
-              <option value="">Manduri</option>
-              <option value="">Miracatu</option>
-              <option value="">Mombuca</option>
-              <option value="">Monte Alegre do Sul</option>
-              <option value="">Monte Mor</option>
-              <option value="">Monteiro Lobato</option>
-              <option value="">Morungaba</option>
-              <option value="">Natividade da Serra</option>
-              <option value="">Nazaré Paulista</option>
-              <option value="">Nova Campina</option>
-              <option value="">Nova Odessa</option>
-              <option value="">Paraibuna</option>
-              <option value="">Paranapanema</option>
-              <option value="">Pardinho</option>
-              <option value="">Pariquera-Açu</option>
-              <option value="">Paulínia</option>
-              <option value="">Pedra Bela</option>
-              <option value="">Pedreira</option>
-              <option value="">Pedro de Toledo</option>
-              <option value="">Pereiras</option>
-              <option value="">Piedade</option>
-              <option value="">Pilar do Sul</option>
-              <option value="">Pindamonhangaba</option>
-              <option value="">Pinhalzinho</option>
-              <option value="">Piquete</option>
-              <option value="">Piracaia</option>
-              <option value="">Piracicaba</option>
-              <option value="">Piraju</option>
-              <option value="">Porangaba</option>
-              <option value="">Porto Feliz</option>
-              <option value="">Potim</option>
-              <option value="">Pratânia</option>
-              <option value="">Quadra</option>
-              <option value="">Queluz</option>
-              <option value="">Rafard</option>
-              <option value="">Redenção da Serra</option>
-              <option value="">Registro</option>
-              <option value="">Ribeira</option>
-              <option value="">Ribeirão Branco</option>
-              <option value="">Ribeirão Grande</option>
-              <option value="">Rio das Pedras</option>
-              <option value="">Riversul</option>
-              <option value="">Roseira</option>
-              <option value="">Saltinho</option>
-              <option value="">Salto</option>
-              <option value="">Salto de Pirapora</option>
-              <option value="">Santa Bárbara d&lsquo;Oeste</option>
-              <option value="">Santa Branca</option>
-              <option value="">Santo Antônio de Posse</option>
-              <option value="">Santo Antônio do Pinhal</option>
-              <option value="">São Bento do Sapucaí</option>
-              <option value="">São José do Barreiro</option>
-              <option value="">São José dos Campos</option>
-              <option value="">São Luís do Paraitinga</option>
-              <option value="">São Manuel</option>
-              <option value="">São Miguel Arcanjo</option>
-              <option value="">São Roque</option>
-              <option value="">São Sebastião</option>
-              <option value="">Sarapuí</option>
-              <option value="">Sarutaiá</option>
-              <option value="">Serra Negra</option>
-              <option value="">Sete Barras</option>
-              <option value="">Silveiras</option>
-              <option value="">Socorro</option>
-              <option value="">Sorocaba</option>
-              <option value="">Sumaré</option>
-              <option value="">Taguaí</option>
-              <option value="">Tapiraí</option>
-              <option value="">Taquarituba</option>
-              <option value="">Taquarivaí</option>
-              <option value="">Tatuí</option>
-              <option value="">Taubaté</option>
-              <option value="">Tejupá</option>
-              <option value="">Tietê</option>
-              <option value="">Torre de Pedra</option>
-              <option value="">Tremembé</option>
-              <option value="">Tuiuti</option>
-              <option value="">Ubatuba</option>
-              <option value="">Valinhos</option>
-              <option value="">Vargem</option>
-              <option value="">Várzea Paulista</option>
-              <option value="">Vinhedo</option>
-              <option value="">Votorantim</option>
+              <option></option>
+              <option>Águas de Lindóia</option>
+              <option>Águas de Santa Bárbara</option>
+              <option>Alambari</option>
+              <option>Alumínio</option>
+              <option>Americana</option>
+              <option>Amparo</option>
+              <option>Angatuba</option>
+              <option>Anhembi</option>
+              <option>Aparecida</option>
+              <option>Apiaí</option>
+              <option>Araçariguama</option>
+              <option>Araçoiaba da Serra</option>
+              <option>Arandu</option>
+              <option>Arapeí</option>
+              <option>Areias</option>
+              <option>Areiópolis</option>
+              <option>Artur Nogueira</option>
+              <option>Atibaia</option>
+              <option>Avaré</option>
+              <option>Bananal</option>
+              <option>Barão de Antonina</option>
+              <option>Barra do Chapéu</option>
+              <option>Barra do Turvo</option>
+              <option>Bofete</option>
+              <option>Boituva</option>
+              <option>Bom Jesus dos Perdões</option>
+              <option>Bom Sucesso de Itararé</option>
+              <option>Botucatu</option>
+              <option>Bragança Paulista</option>
+              <option>Buri</option>
+              <option>Cabreúva</option>
+              <option>Caçapava</option>
+              <option>Cachoeira Paulista</option>
+              <option>Cajati</option>
+              <option>Campina do Monte Alegre</option>
+              <option>Campinas</option>
+              <option>Campo Limpo Paulista</option>
+              <option>Campos do Jordão</option>
+              <option>Cananéia</option>
+              <option>Canas</option>
+              <option>Capão Bonito</option>
+              <option>Capela do Alto</option>
+              <option>Capivari</option>
+              <option>Caraguatatuba</option>
+              <option>Cerqueira César</option>
+              <option>Cerquilho</option>
+              <option>Cesário Lange</option>
+              <option>Conchas</option>
+              <option>Cordeirópolis</option>
+              <option>Coronel Macedo</option>
+              <option>Cosmópolis</option>
+              <option>Cruzeiro</option>
+              <option>Cunha</option>
+              <option>Eldorado</option>
+              <option>Elias Fausto</option>
+              <option>Engenheiro Coelho</option>
+              <option>Fartura</option>
+              <option>Guapiara</option>
+              <option>Guaratinguetá</option>
+              <option>Guareí</option>
+              <option>Holambra</option>
+              <option>Hortolândia</option>
+              <option>Iaras</option>
+              <option>Ibiúna</option>
+              <option>Igaratá</option>
+              <option>Iguape</option>
+              <option>Ilha Comprida</option>
+              <option>Ilhabela</option>
+              <option>Indaiatuba</option>
+              <option>Iperó</option>
+              <option>Iporanga</option>
+              <option>Iracemápolis</option>
+              <option>Itaberá</option>
+              <option>Itaí</option>
+              <option>Itaóca</option>
+              <option>Itapetininga</option>
+              <option>Itapeva</option>
+              <option>Itapira</option>
+              <option>Itapirapuã Paulista</option>
+              <option>Itaporanga</option>
+              <option>Itararé</option>
+              <option>Itariri</option>
+              <option>Itatiba</option>
+              <option>Itatinga</option>
+              <option>Itu</option>
+              <option>Itupeva</option>
+              <option>Jacareí</option>
+              <option>Jacupiranga</option>
+              <option>Jaguariúna</option>
+              <option>Jambeiro</option>
+              <option>Jarinú</option>
+              <option>Joanópolis</option>
+              <option>Jumirim</option>
+              <option>Jundiaí</option>
+              <option>Juquiá</option>
+              <option>Lagoinha</option>
+              <option>Laranjal Paulista</option>
+              <option>Lavrinhas</option>
+              <option>Limeira</option>
+              <option>Lindóia</option>
+              <option>Lorena</option>
+              <option>Louveira</option>
+              <option>Mairinque</option>
+              <option>Manduri</option>
+              <option>Miracatu</option>
+              <option>Mombuca</option>
+              <option>Monte Alegre do Sul</option>
+              <option>Monte Mor</option>
+              <option>Monteiro Lobato</option>
+              <option>Morungaba</option>
+              <option>Natividade da Serra</option>
+              <option>Nazaré Paulista</option>
+              <option>Nova Campina</option>
+              <option>Nova Odessa</option>
+              <option>Paraibuna</option>
+              <option>Paranapanema</option>
+              <option>Pardinho</option>
+              <option>Pariquera-Açu</option>
+              <option>Paulínia</option>
+              <option>Pedra Bela</option>
+              <option>Pedreira</option>
+              <option>Pedro de Toledo</option>
+              <option>Pereiras</option>
+              <option>Piedade</option>
+              <option>Pilar do Sul</option>
+              <option>Pindamonhangaba</option>
+              <option>Pinhalzinho</option>
+              <option>Piquete</option>
+              <option>Piracaia</option>
+              <option>Piracicaba</option>
+              <option>Piraju</option>
+              <option>Porangaba</option>
+              <option>Porto Feliz</option>
+              <option>Potim</option>
+              <option>Pratânia</option>
+              <option>Quadra</option>
+              <option>Queluz</option>
+              <option>Rafard</option>
+              <option>Redenção da Serra</option>
+              <option>Registro</option>
+              <option>Ribeira</option>
+              <option>Ribeirão Branco</option>
+              <option>Ribeirão Grande</option>
+              <option>Rio das Pedras</option>
+              <option>Riversul</option>
+              <option>Roseira</option>
+              <option>Saltinho</option>
+              <option>Salto</option>
+              <option>Salto de Pirapora</option>
+              <option>Santa Bárbara d&lsquo;Oeste</option>
+              <option>Santa Branca</option>
+              <option>Santo Antônio de Posse</option>
+              <option>Santo Antônio do Pinhal</option>
+              <option>São Bento do Sapucaí</option>
+              <option>São José do Barreiro</option>
+              <option>São José dos Campos</option>
+              <option>São Luís do Paraitinga</option>
+              <option>São Manuel</option>
+              <option>São Miguel Arcanjo</option>
+              <option>São Roque</option>
+              <option>São Sebastião</option>
+              <option>Sarapuí</option>
+              <option>Sarutaiá</option>
+              <option>Serra Negra</option>
+              <option>Sete Barras</option>
+              <option>Silveiras</option>
+              <option>Socorro</option>
+              <option>Sorocaba</option>
+              <option>Sumaré</option>
+              <option>Taguaí</option>
+              <option>Tapiraí</option>
+              <option>Taquarituba</option>
+              <option>Taquarivaí</option>
+              <option>Tatuí</option>
+              <option>Taubaté</option>
+              <option>Tejupá</option>
+              <option>Tietê</option>
+              <option>Torre de Pedra</option>
+              <option>Tremembé</option>
+              <option>Tuiuti</option>
+              <option>Ubatuba</option>
+              <option>Valinhos</option>
+              <option>Vargem</option>
+              <option>Várzea Paulista</option>
+              <option>Vinhedo</option>
+              <option>Votorantim</option>
             </select>
           </div>
         </div>
