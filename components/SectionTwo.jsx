@@ -134,7 +134,6 @@ export default function SectionTwo() {
               <option>Americana</option>
               <option>Amparo</option>
               <option>Angatuba</option>
-              <option>Anhembi</option>
               <option>Aparecida</option>
               <option>Apiaí</option>
               <option>Araçariguama</option>
@@ -142,7 +141,6 @@ export default function SectionTwo() {
               <option>Arandu</option>
               <option>Arapeí</option>
               <option>Areias</option>
-              <option>Areiópolis</option>
               <option>Artur Nogueira</option>
               <option>Atibaia</option>
               <option>Avaré</option>
@@ -154,7 +152,6 @@ export default function SectionTwo() {
               <option>Boituva</option>
               <option>Bom Jesus dos Perdões</option>
               <option>Bom Sucesso de Itararé</option>
-              <option>Botucatu</option>
               <option>Bragança Paulista</option>
               <option>Buri</option>
               <option>Cabreúva</option>
@@ -198,7 +195,6 @@ export default function SectionTwo() {
               <option>Indaiatuba</option>
               <option>Iperó</option>
               <option>Iporanga</option>
-              <option>Iracemápolis</option>
               <option>Itaberá</option>
               <option>Itaí</option>
               <option>Itaóca</option>
@@ -225,7 +221,6 @@ export default function SectionTwo() {
               <option>Lagoinha</option>
               <option>Laranjal Paulista</option>
               <option>Lavrinhas</option>
-              <option>Limeira</option>
               <option>Lindóia</option>
               <option>Lorena</option>
               <option>Louveira</option>
@@ -256,12 +251,10 @@ export default function SectionTwo() {
               <option>Pinhalzinho</option>
               <option>Piquete</option>
               <option>Piracaia</option>
-              <option>Piracicaba</option>
               <option>Piraju</option>
               <option>Porangaba</option>
               <option>Porto Feliz</option>
               <option>Potim</option>
-              <option>Pratânia</option>
               <option>Quadra</option>
               <option>Queluz</option>
               <option>Rafard</option>
@@ -284,7 +277,6 @@ export default function SectionTwo() {
               <option>São José do Barreiro</option>
               <option>São José dos Campos</option>
               <option>São Luís do Paraitinga</option>
-              <option>São Manuel</option>
               <option>São Miguel Arcanjo</option>
               <option>São Roque</option>
               <option>São Sebastião</option>
