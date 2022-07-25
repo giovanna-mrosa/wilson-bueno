@@ -1,8 +1,11 @@
 .sectionOneBox {
   width: 100%;
   height: 1030px;
-  padding: 35px 80px;
+  padding: 35px 30px;
   background: url(../public/images/background-main.jpg) center no-repeat;
+  background-clip: content-box;
+  background-size: cover;
+  border-radius: 60px;
   margin-top: 10px;
   align-items: center;
   justify-content: center;
