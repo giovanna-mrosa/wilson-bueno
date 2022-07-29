@@ -89,12 +89,7 @@ export default function SectionTwo() {
           </div>          
         </div>
         <div className={style.videoBox}>
-          <Image
-            src="/images/video.jpg"
-            width="616"
-            height="370"
-            alt="Institutional Video"
-          />
+          {/* video */}
         </div>
       </div>
       <div className={style.columnTwoSectionTwo}>

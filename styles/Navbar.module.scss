@@ -3,23 +3,23 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 50px;
+  padding: 1.25rem 3.125rem;
 
   .logoBox {
-    padding-right: 20px;
-    border-right: 0.8px solid #58585A;
+    padding-right: 1.25rem;
+    border-right: 0.05rem solid #58585A;
   }
 
  .linksBox {
   display: flex;
   align-items: center;
-  gap: 50px;
-  padding-right: 25px;
+  gap: 3.125rem;
+  padding-right: 1.56rem;
 
     .linksHeader {
       display: flex;
       list-style: none;
-      gap: 50px;
+      gap: 3.125rem;
 
       li a {
         text-decoration: none;
