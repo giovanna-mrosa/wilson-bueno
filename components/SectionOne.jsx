@@ -8,16 +8,21 @@ export default function SectionOne() {
     <section className={style.sectionOneBox}>
       <Navbar />
       <div className={style.columnOne}>
-        <p><span>Lorem ipsum dolor sit</span> adipiscing elit. Sed at risus neque.  
-          Cras sit amet ligula ut jus to commo
-          do porta id ut nim. 
-        </p>
+        <div className={style.about}>
+          <p><span>Atuando</span> no mercado farmáceutico há mais de <span>30 anos</span>, atualmente trabalho para a <span>Dermhalys</span>, representante da <span>Aptissen</span> no Brasil<span>.</span></p>
+          <div className={style.btnCompanies}>
+            <a target="_blank" rel="noreferrer" href="https://dermhalys.com.br/">Conheça a Dermhalys</a>
+            <a target="_blank" rel="noreferrer" href="https://aptissen.com/">Conheca a Aptissen</a>
+          </div>
+
+        </div>
+
         <Image 
           src="/images/wilson.png"
           width="500"
           height="450"
           alt="Wilson Bueno"
-          className={style.wilson}
+          
         />
       </div>
       <div className={style.columnTwo}>
@@ -37,13 +42,14 @@ export default function SectionOne() {
             className={style.synolis}
           />
           <div className={style.textBtn}>
-            <p>Lorem ipsum dolor sit amet. Est quasi possimus sed
-              rerum quas quo consequatur quos voluptatem sequi est
-              voluptates prae sentium ut sunt quisquam non voluptas
-              minima. In rerum dolores rem quia odio ea error odio.
-              Ad voluptatibus velit aut omnis. </p>
+            <p>É o único Visco-Antálgico do mercado e o produto mais utilizado 
+              pelos médicos para Viscossuplementação e tratamento da artrose de 
+              joelho e quadril, além de outras articulações menores. O único produto que 
+              atua diretamente na dor sem necessidade de associação com 
+              corticóides, além de ser oneshot, uma única dose. 
+            </p>
             <button className={style.btnKnowMore}>
-              <Link href="/synolis">
+              <Link target="_blank" rel="noreferrer" href="/synolis">
                 <a>CONHECER MAIS</a>
               </Link>
             </button>

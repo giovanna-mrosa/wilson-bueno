@@ -1,8 +1,9 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { LinkedinLogo, WhatsappLogo, InstagramLogo } from 'phosphor-react'
 
 import style from '../styles/Footer.module.scss'
-import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -18,7 +19,7 @@ export default function Footer() {
       <div className={style.rowRight}>
         <ul className={style.links}>
           <li>
-          <Link href="/synolis">
+          <Link target="_blank" rel="noreferrer" href="/synolis">
             <a>O Produto</a>
           </Link>
           </li>
@@ -39,12 +40,7 @@ export default function Footer() {
               target="_blank" 
               rel="noreferrer"
             >
-              <Image  
-                src="/images/linkedin-icon.svg"
-                width="28"
-                height="28"
-                alt="LinkedIn icon"
-              />
+              <LinkedinLogo size={30} />
             </a>
           </button>
           <button className={style.media}>
@@ -53,12 +49,7 @@ export default function Footer() {
               target="_blank" 
               rel="noreferrer"
             >
-              <Image  
-                src="/images/whatsapp-icon.svg"
-                width="28"
-                height="28"
-                alt="WhatsApp icon"
-              />
+              <WhatsappLogo size={30} />
             </a>
           </button>
           <button className={style.media}>
@@ -67,12 +58,7 @@ export default function Footer() {
               target="_blank" 
               rel="noreferrer"
             >
-              <Image  
-                src="/images/instagram-icon.svg"
-                width="28"
-                height="28"
-                alt="Instagram icon"
-              />
+              <InstagramLogo size={30} />
             </a>
           </button>
         </div>
