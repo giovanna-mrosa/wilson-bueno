@@ -7,17 +7,17 @@ import style from '../styles/Navbar.module.scss'
 
 export default function Navbar() {
   return (
-    <header className={style.headerBox}>
-      <div className={style.logoBox}>
+    <nav className={style.navBox}>
+      <Link href="/" className={style.logoBox}>
         <Image
           src="/images/logo.svg"
           width="270"
           height="70"
           alt="Logo"
         />
-      </div>
+      </Link>
       <div className={style.linksBox}>
-        <ul className={style.linksHeader}>
+        <ul className={style.linksNav}>
         <li>
             <Link target="_blank" rel="noreferrer" href="/synolis">
               <a>O Produto</a>
@@ -37,6 +37,6 @@ export default function Navbar() {
           <WhatsappLogo size={45} />
         </a>
       </div>
-    </header>
+    </nav>
   )
 }

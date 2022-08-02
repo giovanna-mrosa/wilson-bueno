@@ -9,6 +9,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: 3.125rem;
+  flex-wrap: wrap;
 
   .rowLogo {
     display: flex;
@@ -71,5 +72,10 @@
 
       }
     }
+  }
+  @media (max-width: 768px) {
+    background-image: url(../public/images/background-footer-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
