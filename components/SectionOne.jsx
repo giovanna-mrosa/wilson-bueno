@@ -2,11 +2,17 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Navbar from '../components/Navbar'
 import style from '../styles/SectionOne.module.scss'
+import NavbarMobile from './NavbarMobile'
 
 export default function SectionOne() {
   return (
     <section className={style.sectionOneBox}>
-      <Navbar />
+      {window.screen.width > 768 ? (
+          <Navbar />
+        ) : (
+          <NavbarMobile />
+        )            
+      }      
       <div className={style.columnOne}>
         <div className={style.about}>
           <p><span>Atuando</span> no mercado farmáceutico há mais de <span>30 anos</span>, atualmente trabalho para a <span>Dermhalys</span>, representante da <span>Aptissen</span> no Brasil<span>.</span></p>

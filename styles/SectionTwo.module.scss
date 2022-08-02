@@ -81,6 +81,7 @@
     justify-content: space-between;
     padding: 0 9.375rem;
     margin-top: 2.19rem;
+    flex-wrap: wrap;
 
     .rowOne {
       display: flex;
@@ -225,5 +226,8 @@
         }
       }
     }
+  }
+  @media (max-width: 768px) {
+    
   }
 }
