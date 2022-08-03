@@ -1,12 +1,14 @@
 .navBoxMob {
   display: flex;
   align-items: center;
+  position: relative;
+  padding: 25px 30px;
 
   .mobMenu {
     width: 100%;
     display: flex;
     justify-content: flex-end;
-    position: relative;
+    
   
     .burgerInput {
       display: none;
@@ -62,47 +64,37 @@
     }
   
     .menuBox {
-      width: 380px;
-      height: 380px;
+      padding: 20px 30px;
       background-color: #DA051F;
       position: absolute;
-      top: -190px;
-      right: -190px;
-      display: flex;
-      align-items: flex-start;
-      justify-content: flex-end;
+      top: 80px;
+      right: 30px;
+      border-radius: 12px;
       flex-direction: column;
-      border-radius: 50%;
-      z-index: 4;
+      z-index: 5;
+      text-align: center;
   
       transition: all ease 1s;
-  
-      // .closeMenu {
-      //   margin-left: 180px;
-      //   height: fit-content;
-      //   width: 20px;
-      // }
   
       .linksMob {      
         z-index: 5;
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
-        margin-bottom: 80px;
-        margin-left: 70px;
+        align-items: center;
+        justify-content: center;
         gap: 8px;
+        list-style: none;
   
         a {
           width: 100%;
           text-decoration: none;
-          color: #58585A;
+          color: #fff;
           font-size: 18px;
           text-align: center;
         }
       }
     }
     .hiddenMenuBox {
-      top: -450px;
       right: -450px;
     }
   }
