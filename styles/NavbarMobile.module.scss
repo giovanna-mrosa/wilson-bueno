@@ -1,14 +1,21 @@
 .navBoxMob {
   display: flex;
   align-items: center;
+<<<<<<< HEAD
   position: relative;
   padding: 25px 30px;
+=======
+>>>>>>> 1c38bb07f7d601c71f5729075655a5cffbc5f91f
 
   .mobMenu {
     width: 100%;
     display: flex;
     justify-content: flex-end;
+<<<<<<< HEAD
     
+=======
+    position: relative;
+>>>>>>> 1c38bb07f7d601c71f5729075655a5cffbc5f91f
   
     .burgerInput {
       display: none;
@@ -64,6 +71,7 @@
     }
   
     .menuBox {
+<<<<<<< HEAD
       padding: 20px 30px;
       background-color: #DA051F;
       position: absolute;
@@ -76,25 +84,63 @@
   
       transition: all ease 1s;
   
+=======
+      width: 380px;
+      height: 380px;
+      background-color: #DA051F;
+      position: absolute;
+      top: -190px;
+      right: -190px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+      flex-direction: column;
+      border-radius: 50%;
+      z-index: 4;
+  
+      transition: all ease 1s;
+  
+      // .closeMenu {
+      //   margin-left: 180px;
+      //   height: fit-content;
+      //   width: 20px;
+      // }
+  
+>>>>>>> 1c38bb07f7d601c71f5729075655a5cffbc5f91f
       .linksMob {      
         z-index: 5;
         display: flex;
         flex-direction: column;
+<<<<<<< HEAD
         align-items: center;
         justify-content: center;
         gap: 8px;
         list-style: none;
+=======
+        align-items: flex-end;
+        margin-bottom: 80px;
+        margin-left: 70px;
+        gap: 8px;
+>>>>>>> 1c38bb07f7d601c71f5729075655a5cffbc5f91f
   
         a {
           width: 100%;
           text-decoration: none;
+<<<<<<< HEAD
           color: #fff;
+=======
+          color: #58585A;
+>>>>>>> 1c38bb07f7d601c71f5729075655a5cffbc5f91f
           font-size: 18px;
           text-align: center;
         }
       }
     }
     .hiddenMenuBox {
+<<<<<<< HEAD
+=======
+      top: -450px;
+>>>>>>> 1c38bb07f7d601c71f5729075655a5cffbc5f91f
       right: -450px;
     }
   }
