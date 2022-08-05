@@ -90,6 +90,12 @@ export default function SectionTwo() {
         </div>
         <div className={style.videoBox}>
           {/* video */}
+          <iframe width="560" height="315" 
+            src="https://www.youtube.com/embed/z5CNFzF8Y90?controls=0" 
+            title="YouTube video player" frameBorder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowFullScreen
+          ></iframe>
         </div>
       </div>
       <div className={style.columnTwoSectionTwo}>

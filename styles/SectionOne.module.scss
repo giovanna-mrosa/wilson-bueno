@@ -135,11 +135,11 @@
     background-clip: content-box;
     background-size: cover;
     border-radius: 60px;
-    padding: 2rem 0;
-    height: 94rem;
+    padding: 2rem 0.938rem;
+    height: 92.25rem;
 
     .columnOne {
-      padding: 1rem 4rem;
+      padding: 1rem 2.125rem;
 
       .about {
         width: 100%;
@@ -157,6 +157,8 @@
     .columnTwo {
       .columnTwoContent {
         justify-content: center;
+        gap: 1.5rem;
+        text-align: center;
 
         img {
           width: 300px !important;

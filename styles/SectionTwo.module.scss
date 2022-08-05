@@ -42,10 +42,7 @@
       }       
     }
 
-    .videoBox {
-      width: 38.5rem;
-      height: 23.125rem;
-      background-color: #49494a;
+    .videoBox iframe {
       border-radius: 18px;
     }
   }
@@ -228,6 +225,35 @@
     }
   }
   @media (max-width: 768px) {
-    
+    padding: .875rem 0;
+
+    .columnOneSectionTwo {
+      gap: 2.125rem;
+
+      .testimony {
+        width: 22rem;
+        height: 19rem;
+
+        h3 {
+          font-size: 1.5rem;
+        }
+
+        p {
+          font-size: 1.125rem;
+        }
+      }
+
+      .videoBox iframe {
+        width: 24rem !important;
+      }
+    }
+
+    .columnTwoSectionTwo {
+      img {
+        width: 24rem !important;
+        height: 24rem !important;
+        object-fit: cover;
+      }
+    }
   }
 }
