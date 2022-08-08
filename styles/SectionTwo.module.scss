@@ -258,6 +258,8 @@
       .where {
         text-align: center;
         left: 2rem;
+        top: auto;
+        bottom: 1.25rem;
         font-size: 1rem;
         width: 20.55rem;
       }
@@ -265,6 +267,7 @@
 
     .columnThreeSectionTwo {
       padding: 0 1.375rem;
+      gap: 2rem;
     }
   }
 }

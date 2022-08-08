@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { LinkedinLogo, WhatsappLogo, InstagramLogo } from 'phosphor-react'
@@ -6,15 +6,34 @@ import { LinkedinLogo, WhatsappLogo, InstagramLogo } from 'phosphor-react'
 import style from '../styles/Footer.module.scss'
 
 export default function Footer() {
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    if (window.screen.width < 768) {
+      setIsMobile(true)
+    }
+  }, [])
+
   return (
   <footer className={style.container}>
     <div className={style.rowLogo}>
-        <Image  
+    {isMobile ? (
+          <Image  
+          src="/images/logo.svg"
+          width="173"
+          height="45"
+          alt="logo"
+        />
+        ) : (
+          <Image  
           src="/images/logo-white.svg"
           width="455"
           height="123"
           alt="logo"
         />
+        )            
+      }      
+        
       </div>
       <div className={style.rowRight}>
         <ul className={style.links}>

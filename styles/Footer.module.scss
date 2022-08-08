@@ -74,12 +74,40 @@
     }
   }
   @media (max-width: 768px) {
-    background-image: url(../public/images/background-footer-mobile.jpg);
+    background-image: url(../public/images/bla.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    height: auto;
+    width: auto;
+    margin: 1.5rem;
+    box-shadow: 0px 4px 4px 0px #0000002f;
+    border-radius: 18px;
+    justify-content: flex-start;
+    padding: 2rem;
+
+    .rowLogo {
+      padding: 0 0 2.875rem 0;
+    }
+
 
     .rowRight {
       padding: 0;
+      flex-wrap: wrap;
+      gap: 3rem;
+
+      .mediasBox {
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+
+        .media {
+          background: #DA051F;
+
+          svg {
+            color: #fff;
+          }
+        }
+      }
     }
   }
 }

@@ -17,7 +17,7 @@ export default function NavbarMobile() {
     <nav className={style.navBoxMob}>
       <Link href="/" className={style.logoBoxMob}>
         <a>
-          <Image src="/images/logo.svg" width="190" height="50" alt="" />
+          <Image src="/images/logo.svg" width="300" height="79" alt="" />
         </a>
       </Link>
       
