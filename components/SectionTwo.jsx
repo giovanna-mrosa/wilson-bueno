@@ -4,6 +4,7 @@ import { useKeenSlider } from "keen-slider/react"
 import "keen-slider/keen-slider.min.css"
 
 import style from '../styles/SectionTwo.module.scss'
+import { FormContact } from './FormContact';
 
 export default function SectionTwo() {
   const [sliderRef] = useKeenSlider(
@@ -313,30 +314,9 @@ export default function SectionTwo() {
           <h3>Não receita o SynolisVA ainda? <br />
             Quer saber mais?
           </h3>
-          <form action="submit">
-            <input 
-              type="text" 
-              name="name" 
-              id="name" 
-              placeholder="Nome"
-            />
-            <div className={style.mailPhone}>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="E-mail"
-              />
-               <input
-                type="tel"
-                name="tel"
-                id="tel"
-                placeholder="Telefone"
-              />
-            </div>
-            <textarea name="message" id="message" cols="30" rows="10" />
-            <button type="submit">ENVIAR</button>
-          </form>
+          
+          <FormContact />
+
         </div>
       </div>
     </section>
