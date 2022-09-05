@@ -1,10 +1,14 @@
-import React, { useState } from 'react';
-import Image from "next/image"
+import React from 'react';
+// import Image from "next/image"
 import { useKeenSlider } from "keen-slider/react"
 import "keen-slider/keen-slider.min.css"
+import ComponentMap from './Map/index'
 
 import style from '../styles/SectionTwo.module.scss'
 import { FormContact } from './FormContact';
+
+const DEFAULT_CENTER = [38.907132, -77.036546]
+const anotherPosition = [38.907132, -75.036546]
 
 export default function SectionTwo() {
   const [sliderRef] = useKeenSlider(
@@ -100,17 +104,37 @@ export default function SectionTwo() {
         </div>
       </div>
       <div className={style.columnTwoSectionTwo}>
-        <Image 
-          src="/images/map.jpg"
-          width="1222"
-          height="596"
-          alt="Map"
-        />
+
+      <ComponentMap className={style.homeMap} center={DEFAULT_CENTER} zoom={12}>
+          {({ TileLayer, Marker, Popup }) => (
+            <>
+              <TileLayer
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+              />
+              <Marker position={DEFAULT_CENTER}>
+                <Popup>
+                  A pretty CSS3 popup. <br /> Easily customizable.
+                </Popup>
+              </Marker>
+              <Marker position={anotherPosition}>
+                <Popup>
+                  A pretty CSS3 popup. <br /> Easily customizable.
+                </Popup>
+              </Marker>
+            </>
+          )}
+        </ComponentMap>
+
         <div className={style.where}>
           <h3>Onde você encontra SynolisVA na minha rede</h3>
         </div>
+
       </div>
+
+
       <div className={style.columnThreeSectionTwo}>
+
         <div className={style.rowOne}>
           <p>Atendo toda a <br />
             <span className={style.bigGray}>região do<br /></span>
@@ -121,6 +145,7 @@ export default function SectionTwo() {
             <span className={style.bigGray}>cidades<br /></span>
             no Estado de São Paulo
           </p>
+
           <div className={style.optionCity}>
             <p>Confira se na sua cidade estou disponível</p>
             <select 
@@ -310,6 +335,7 @@ export default function SectionTwo() {
             </select>
           </div>
         </div>
+
         <div className={style.rowTwo}>
           <h3>Não receita o SynolisVA ainda? <br />
             Quer saber mais?
