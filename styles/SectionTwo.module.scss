@@ -53,9 +53,10 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    margin-top: 3.125rem;
+    margin: 5rem 0 2rem 0;
 
     .where {
+      width: max-content;
       position: absolute;
       background-color: #da051f;
       padding: 0.94rem;
@@ -66,8 +67,10 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      top: 1.25rem;
-      left: 19.375rem;
+      top: 10%;
+      left: 50%;
+      transform: translate(-50%, -10%);
+      z-index: 9999;
     }
   }
 
@@ -190,19 +193,11 @@
     }
 
     .columnTwoSectionTwo {
-      img {
-        width: 23rem !important;
-        height: 23rem !important;
-        object-fit: cover;
-      }
-
       .where {
         text-align: center;
-        left: 2rem;
-        top: auto;
-        bottom: 1.25rem;
+        width: 77%;
+        word-wrap: break-word;
         font-size: 1rem;
-        width: 20.55rem;
       }
     }
 

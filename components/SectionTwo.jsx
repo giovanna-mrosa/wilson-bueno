@@ -1,5 +1,4 @@
 import React from 'react';
-// import Image from "next/image"
 import { useKeenSlider } from "keen-slider/react"
 import "keen-slider/keen-slider.min.css"
 import ComponentMap from './Map/index'
@@ -7,8 +6,8 @@ import ComponentMap from './Map/index'
 import style from '../styles/SectionTwo.module.scss'
 import { FormContact } from './FormContact';
 
-const DEFAULT_CENTER = [38.907132, -77.036546]
-const anotherPosition = [38.907132, -75.036546]
+const DEFAULT_CENTER = [-23.1298775,-46.5678642]
+const anotherPosition = [-23.1304447,-46.569866]
 
 export default function SectionTwo() {
   const [sliderRef] = useKeenSlider(

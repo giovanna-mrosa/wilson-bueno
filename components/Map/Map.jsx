@@ -5,8 +5,8 @@ import 'leaflet/dist/leaflet.css';
 
 import styles from './Map.module.css';
 
-import iconRetinaUrl from 'leaflet/dist/images/marker-icon-2x.png';
-import iconUrl from 'leaflet/dist/images/marker-icon.png';
+import iconRetinaUrl from './assets/location-sign.png';
+import iconUrl from './assets/location-sign.png';
 import shadowUrl from 'leaflet/dist/images/marker-shadow.png';
 
 const { MapContainer, MapConsumer } = ReactLeaflet;
@@ -26,6 +26,11 @@ const Map = ({ children, className, ...rest }) => {
         iconRetinaUrl: iconRetinaUrl.src,
         iconUrl: iconUrl.src,
         shadowUrl: shadowUrl.src,
+
+        iconSize: [35, 35],
+        iconAnchor:   [0, 50],
+        shadowAnchor: [-10, 72],
+        popupAnchor:  [17, -65]
       });
     })();
   }, []);
