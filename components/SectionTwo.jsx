@@ -5,6 +5,7 @@ import ComponentMap from './Map/index'
 
 import style from '../styles/SectionTwo.module.scss'
 import { FormContact } from './FormContact';
+import Image from 'next/image';
 
 const DEFAULT_CENTER = [-23.1298775,-46.5678642]
 const anotherPosition = [-23.1304447,-46.569866]
@@ -93,18 +94,18 @@ export default function SectionTwo() {
           </div>          
         </div>
         <div className={style.videoBox}>
-          {/* video */}
-          <iframe width="560" height="315" 
-            src="https://www.youtube.com/embed/z5CNFzF8Y90?controls=0" 
-            title="YouTube video player" frameBorder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowFullScreen
-          ></iframe>
+          <Image 
+          src="/images/video.jpg"
+          width="560"
+          height="315"
+          alt=""
+          className={style.logoSynolis}
+          />
         </div>
       </div>
       <div className={style.columnTwoSectionTwo}>
 
-      <ComponentMap className={style.homeMap} center={DEFAULT_CENTER} zoom={12}>
+      <ComponentMap className={style.homeMap} center={DEFAULT_CENTER} zoom={14}>
           {({ TileLayer, Marker, Popup }) => (
             <>
               <TileLayer

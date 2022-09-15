@@ -1,15 +1,35 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect } from 'react';
 import L from 'leaflet';
-import * as ReactLeaflet from 'react-leaflet';
+import * as ReactLeaflet from 'react-leaflet'
 import 'leaflet/dist/leaflet.css';
 
 import styles from './Map.module.css';
+import '../../node_modules/leaflet-geosearch/dist/geosearch.css';
 
 import iconRetinaUrl from './assets/location-sign.png';
 import iconUrl from './assets/location-sign.png';
 import shadowUrl from 'leaflet/dist/images/marker-shadow.png';
 
-const { MapContainer, MapConsumer } = ReactLeaflet;
+import { OpenStreetMapProvider, GeoSearchControl } from 'leaflet-geosearch'
+
+const { MapContainer, MapConsumer, useMap } = ReactLeaflet;
+
+const Search = (props) => {
+  const map = useMap() 
+  const { provider } = props
+
+  useEffect(() => {
+      const searchControl = new GeoSearchControl({
+          provider,
+      })
+
+      map.addControl(searchControl) 
+      return () => map.removeControl(searchControl)
+  }, [props])
+
+  return null
+}
 
 const Map = ({ children, className, ...rest }) => {
   let mapClassName = styles.map;
@@ -40,6 +60,8 @@ const Map = ({ children, className, ...rest }) => {
       <MapConsumer>
         {(map) => children(ReactLeaflet, map)}
       </MapConsumer>
+
+      <Search provider={new OpenStreetMapProvider()} />
     </MapContainer>
   )
 }

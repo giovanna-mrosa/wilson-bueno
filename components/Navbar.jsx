@@ -9,12 +9,14 @@ export default function Navbar() {
   return (
     <nav className={style.navBox}>
       <Link href="/" className={style.logoBox}>
-        <Image
-          src="/images/logo.svg"
-          width="270"
-          height="70"
-          alt="Logo"
-        />
+        <a>
+          <Image
+            src="/images/logo.svg"
+            width="270"
+            height="70"
+            alt="Logo"
+          />
+        </a>
       </Link>
       <div className={style.linksBox}>
         <ul className={style.linksNav}>
