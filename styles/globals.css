@@ -7,3 +7,22 @@
   font-family: 'Roboto', sans-serif;
 }
 
+.leaflet-control-geosearch form {
+  height: 30px !important;  
+  margin-left: 5px !important;
+  border-radius: 2px !important;
+}
+
+.leaflet-control-geosearch form .reset {
+  display: none;
+}
+
+.leaflet-geosearch-button.active .leaflet-bar-part {
+  width: 30px !important;
+}
+
+.leaflet-control-geosearch .results.active {
+  padding: 5px 0 !important;
+  border: none !important;
+  border-radius: 0 0 2px 2px !important;
+}

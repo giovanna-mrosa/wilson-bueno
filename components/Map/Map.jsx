@@ -4,7 +4,7 @@ import L from 'leaflet';
 import * as ReactLeaflet from 'react-leaflet'
 import 'leaflet/dist/leaflet.css';
 
-import styles from './Map.module.css';
+import styles from './Map.module.scss';
 import '../../node_modules/leaflet-geosearch/dist/geosearch.css';
 
 import iconRetinaUrl from './assets/location-sign.png';
@@ -22,6 +22,9 @@ const Search = (props) => {
   useEffect(() => {
       const searchControl = new GeoSearchControl({
           provider,
+          searchLabel: 'Procure sua cidade',
+          showMarker: false,
+          retainZoomLevel: true,
       })
 
       map.addControl(searchControl) 
