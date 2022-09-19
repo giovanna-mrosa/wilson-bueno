@@ -73,7 +73,7 @@
       }
     }
   }
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     background-image: url(../public/images/bla.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -84,6 +84,7 @@
     border-radius: 18px;
     justify-content: flex-start;
     padding: 2rem;
+    flex-direction: column;
 
     .rowLogo {
       padding: 0 0 2.875rem 0;

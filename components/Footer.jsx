@@ -9,7 +9,7 @@ export default function Footer() {
   const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
-    if (window.screen.width < 768) {
+    if (window.screen.width <= 1024) {
       setIsMobile(true)
     }
   }, [])
@@ -49,7 +49,7 @@ export default function Footer() {
             <a href="#">Onde Me Encontrar</a>
           </li>
           <li>
-            <a href="#">Fale Comigo</a>
+            <a href="https://wa.me/message/NZ25IHMNMB76B1">Fale Comigo</a>
           </li>
         </ul>
         <div className={style.mediasBox}>

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { WhatsappLogo } from "phosphor-react";
 import {React, useState} from "react";
 
 import style from '../styles/NavbarMobile.module.scss'
@@ -40,9 +41,10 @@ export default function NavbarMobile() {
               <a href="#">Onde Me Encontrar</a>
             </li>
             <li>
-              <a className={style.span} href="#">Fale Comigo</a>
+              <a className={style.span} href="https://wa.me/message/NZ25IHMNMB76B1">Fale Comigo</a>
             </li>
           </ul>
+          
         </div>
       </div>
     </nav>

@@ -9,7 +9,7 @@ export default function SectionOne() {
   const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
-    if (window.screen.width < 768) {
+    if (window.screen.width <= 1024) {
       setIsMobile(true)
     }
   }, [])
