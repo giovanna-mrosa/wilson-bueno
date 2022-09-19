@@ -43,10 +43,10 @@ export default function Footer() {
           </Link>
           </li>
           <li>
-            <a href="#">Quem Sou</a>
+            <a href="#about">Quem Sou</a>
           </li>
           <li>
-            <a href="#">Onde Me Encontrar</a>
+            <a href="#where">Onde Me Encontrar</a>
           </li>
           <li>
             <a href="https://wa.me/message/NZ25IHMNMB76B1">Fale Comigo</a>

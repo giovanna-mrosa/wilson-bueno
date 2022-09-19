@@ -26,13 +26,13 @@ export default function Navbar() {
             </Link>
             </li>
             <li>
-              <a href="#">Quem Sou</a>
+              <a href="#about">Quem Sou</a>
             </li>
             <li>
-              <a href="#">Onde Me Encontrar</a>
+              <a href="#where">Onde Me Encontrar</a>
             </li>
             <li>
-              <a className={style.span} href="#">Fale Comigo</a>
+              <a className={style.span} href="https://wa.me/message/NZ25IHMNMB76B1">Fale Comigo</a>
             </li>
         </ul>
         <a target="_blank" rel="noreferrer" href="https://wa.me/message/NZ25IHMNMB76B1" className={style.whats}>

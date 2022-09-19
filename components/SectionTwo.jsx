@@ -49,7 +49,7 @@ export default function SectionTwo() {
 
   return (
     <section className={style.sectionTwoBox}>
-      <div className={style.columnOneSectionTwo}>
+      <div className={style.columnOneSectionTwo} id="about">
         <div className={style.testimony}>
           <h3>Depoimentos</h3>
           <div className="carousel-wrapper">
@@ -103,7 +103,7 @@ export default function SectionTwo() {
           />
         </div>
       </div>
-      <div className={style.columnTwoSectionTwo}>
+      <div className={style.columnTwoSectionTwo} id="where">
 
       <ComponentMap className={style.homeMap} center={DEFAULT_CENTER} zoom={14}>
           {({ TileLayer, Marker, Popup }) => (
