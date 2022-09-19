@@ -26,10 +26,10 @@ export default function Navbar() {
             </Link>
             </li>
             <li>
-              <a href="#about">Quem Sou</a>
+              <a href="http://localhost:3000/#about">Quem Sou</a>
             </li>
             <li>
-              <a href="#where">Onde Me Encontrar</a>
+              <a href="http://localhost:3000/#where">Onde Me Encontrar</a>
             </li>
             <li>
               <a className={style.span} href="https://wa.me/message/NZ25IHMNMB76B1">Fale Comigo</a>

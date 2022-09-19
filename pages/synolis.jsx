@@ -4,6 +4,8 @@ import Navbar from '/components/Navbar'
 import NavbarMobile from '/components/NavbarMobile'
 
 import style from '../styles/Synolis.module.scss'
+import Link from 'next/link';
+import { CaretLeft } from 'phosphor-react';
 
 export default function Synolis() {
   const [isMobile, setIsMobile] = useState(false)
@@ -24,6 +26,12 @@ export default function Synolis() {
           )            
           }   
         </header>
+
+        <Link href="/" >
+          <a className={style.back}>
+            <CaretLeft /> Voltar
+          </a>
+        </Link>
         
         <div /*className={style.cheetah}*/>
           <Image 
