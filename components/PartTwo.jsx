@@ -3,14 +3,15 @@ import { useKeenSlider } from "keen-slider/react"
 import "keen-slider/keen-slider.min.css"
 import ComponentMap from './Map/index'
 
-import style from '../styles/SectionTwo.module.scss'
+import style from '../styles/PartTwo.module.scss'
 import { FormContact } from './FormContact';
 import Image from 'next/image';
+import { ArrowUpLeft } from 'phosphor-react';
 
 const DEFAULT_CENTER = [-23.1298775,-46.5678642]
 const anotherPosition = [-23.1304447,-46.569866]
 
-export default function SectionTwo() {
+export default function PartTwo() {
   const [sliderRef] = useKeenSlider(
     {
       loop: true,
@@ -48,8 +49,8 @@ export default function SectionTwo() {
   )
 
   return (
-    <section className={style.sectionTwoBox}>
-      <div className={style.columnOneSectionTwo} id="about">
+    <main className={style.partTwoBox}>
+      <section className={style.sectionOne} id="about">
         <div className={style.testimony}>
           <h3>Depoimentos</h3>
           <div className="carousel-wrapper">
@@ -102,8 +103,9 @@ export default function SectionTwo() {
           className={style.logoSynolis}
           />
         </div>
-      </div>
-      <div className={style.columnTwoSectionTwo} id="where">
+      </section>
+
+      <section className={style.sectionTwo} id="where">
 
       <ComponentMap className={style.homeMap} center={DEFAULT_CENTER} zoom={14}>
           {({ TileLayer, Marker, Popup }) => (
@@ -127,23 +129,34 @@ export default function SectionTwo() {
         </ComponentMap>
 
         <div className={style.where}>
-          <h3>Onde você encontra SynolisVA na minha rede</h3>
+          <h3>Onde você encontra SynolisVA na sua cidade</h3>
+          <p>
+            <ArrowUpLeft size={30} />
+            Clique na lupa e busque
+          </p>
         </div>
 
-      </div>
+      </section>
 
 
-      <div className={style.columnThreeSectionTwo}>
+      <section className={style.sectionThree} id="talkToMe">
 
         <div className={style.rowOne}>
-          <p>Atendo toda a <br />
-            <span className={style.bigGray}>região do<br /></span>
+           <p>Atuando nas regiões <br />
+            <span className={style.bigGray}>de </span>
+            <span className={style.bigRed}>Campinas</span>
+            <span className={style.bigGray}>,<br /></span>
+            <span className={style.bigRed}>Jundiaí</span>
+            <span className={style.bigGray}>,<br /></span>
+            <span className={style.bigRed}>Sorocaba </span>
+            <span className={style.bigGray}>e<br /></span>
             <span className={style.bigRed}>Vale do Paraíba</span>
             <span className={style.bigGray}>,<br /></span>
             alcançando mais de<br />
             <span className={style.bigRed}>180 </span>
             <span className={style.bigGray}>cidades<br /></span>
-            no Estado de São Paulo
+            no Estado de  
+            <span className={style.red}> São Paulo</span>
           </p>
 
           <div className={style.optionCity}>
@@ -337,14 +350,19 @@ export default function SectionTwo() {
         </div>
 
         <div className={style.rowTwo}>
-          <h3>Não receita o SynolisVA ainda? <br />
+          <h3>Não conhece o SynolisVA ainda? <br />
             Quer saber mais?
           </h3>
           
           <FormContact />
 
         </div>
-      </div>
-    </section>
+      </section>
+
+      <section className={style.sectionFour}>
+        <p className={style.obs1}>Ortopedistas, Reumatologistas e Médicos do Esporte, este produto é vendido em nível nacional, quando necessitar dentro dessas regiões, não exite em entrar em contato comigo.</p>
+        {/* <p className={style.obs2}>Caso acredide que esteja com sintomas de Osteoartrite, entre em contato com seu médico.</p> */}
+      </section>
+    </main>
   )
 }

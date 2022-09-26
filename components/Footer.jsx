@@ -49,7 +49,7 @@ export default function Footer() {
             <a href="http://localhost:3000/#where">Onde Me Encontrar</a>
           </li>
           <li>
-            <a href="https://wa.me/message/NZ25IHMNMB76B1">Fale Comigo</a>
+            <a href="https://localhost//:3000/#talkToMe">Fale Comigo</a>
           </li>
         </ul>
         <div className={style.mediasBox}>

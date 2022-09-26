@@ -32,7 +32,7 @@ export default function Navbar() {
               <a href="http://localhost:3000/#where">Onde Me Encontrar</a>
             </li>
             <li>
-              <a className={style.span} href="https://wa.me/message/NZ25IHMNMB76B1">Fale Comigo</a>
+              <a className={style.span} href="https://localhost//:3000/#talkToMe">Fale Comigo</a>
             </li>
         </ul>
         <a target="_blank" rel="noreferrer" href="https://wa.me/message/NZ25IHMNMB76B1" className={style.whats}>

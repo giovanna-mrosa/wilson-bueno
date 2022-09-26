@@ -1,11 +1,11 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
-import Navbar from '../components/Navbar'
-import style from '../styles/SectionOne.module.scss'
+import Navbar from './Navbar'
+import style from '../styles/PartOne.module.scss'
 import NavbarMobile from './NavbarMobile'
 
-export default function SectionOne() {
+export default function PartOne() {
   const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
@@ -15,14 +15,14 @@ export default function SectionOne() {
   }, [])
 
   return (
-    <section className={style.sectionOneBox}>
+    <main className={style.sectionOneBox}>
       {isMobile ? (
           <NavbarMobile />
         ) : (
           <Navbar />
         )            
       }      
-      <div className={style.columnOne}>
+      <section className={style.columnOne}>
         <div className={style.about}>
           <p><span>Atuando</span> no mercado farmáceutico há mais de <span>30 anos</span>, atualmente trabalho para a <span>Dermhalys</span>, representante da <span>Aptissen</span> no Brasil<span>.</span></p>
           <div className={style.btnCompanies}>
@@ -39,8 +39,8 @@ export default function SectionOne() {
           alt="Wilson Bueno"
           
         />
-      </div>
-      <div className={style.columnTwo}>
+      </section>
+      <section className={style.columnTwo}>
       <Image 
           src="/images/synolis-logo.svg"
           width="385"
@@ -71,8 +71,8 @@ export default function SectionOne() {
           </div>
         </div>
         
-      </div>
-    </section>
+      </section>
+    </main>
   )
 }
 

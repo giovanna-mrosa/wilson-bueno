@@ -1,11 +1,11 @@
-.sectionTwoBox {
+.partTwoBox {
   width: 100%;
   display: flex;
   flex-direction: column;
   padding: 3.125rem 1.25rem 1.875rem 1.25rem;
   align-items: center;
 
-  .columnOneSectionTwo {
+  .sectionOne {
     display: flex;
     width: 100%;
     gap: 3.125rem;
@@ -47,7 +47,7 @@
     }
   }
 
-  .columnTwoSectionTwo {
+  .sectionTwo {
     display: flex;
     width: 100%;
     align-items: center;
@@ -65,16 +65,23 @@
       font-weight: 900;
       font-size: 1.81rem;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       bottom: 5%;
       left: 50%;
       transform: translate(-50%, -5%);
       z-index: 9999;
+      
+      p{
+        display: flex;
+        align-items: center;
+        font-size: 1.5rem;
+      }
     }
   }
 
-  .columnThreeSectionTwo {
+  .sectionThree {
     display: flex;
     width: 100%;
     align-items: center;
@@ -91,17 +98,21 @@
       gap: 1.875rem;
 
       p {
-        font-size: 2.25rem;
+        font-size: 2rem;
         font-weight: 500;
         color: #49494a;
 
+        .red {
+          color: #da051f;
+        }
+
         .bigGray {
-          font-size: 2.875rem;
+          font-size: 2.5rem;
         }
 
         .bigRed {
           color: #da051f;
-          font-size: 2.875rem;
+          font-size: 2.5rem;
         }
       }
 
@@ -166,6 +177,19 @@
         font-weight: 600;
       }      
     }
+  }
+
+  .sectionFour {
+    width: 80%;
+    background-color: #ddd;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #49494a;
+    margin-top: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0px 4px 4px 0px #00000040;
+    text-align: center;
   }
   
   @media (max-width: 1024px) {
