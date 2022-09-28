@@ -5,12 +5,14 @@ import NavbarMobile from '/components/NavbarMobile'
 
 import style from '../styles/Synolis.module.scss'
 import Link from 'next/link';
-import { CaretLeft, Plus } from 'phosphor-react';
+import { CaretLeft, Plus, X } from 'phosphor-react';
 
 export default function Synolis() {
   const [isMobile, setIsMobile] = useState(false)
   const [openInfoTreat, setOpenInfoTreat] = useState(false)
   const [openInfoDisease, setOpenInfoDisease] = useState(false)
+  const [toggleSymptoms, setToggleSymptoms] = useState(false)
+  const [toggleFactors, setToggleFactors] = useState(false)
 
   function handleBoxInfoTreat() {
     setOpenInfoTreat(!openInfoTreat)
@@ -19,6 +21,17 @@ export default function Synolis() {
   function handleBoxInfoDisease() {
     setOpenInfoDisease(!openInfoDisease)
   }
+  function handleSymptoms() {
+    setToggleSymptoms(!toggleSymptoms)
+  }
+
+  const isSymptomsOpen = toggleSymptoms === false ? `${style.hiddenOverlay} ${style.overlay}` : style.overlay
+
+  function handleFactors() {
+    setToggleFactors(!toggleFactors)
+  }
+
+  const isFactorsOpen = toggleFactors === false ? `${style.hiddenOverlay} ${style.overlay}` : style.overlay
 
   useEffect(() => {
     if (window.screen.width <= 1024) {
@@ -53,6 +66,7 @@ export default function Synolis() {
         <h2 className={style.osteo}>E A <span>OSTEO</span>ARTRITE</h2>
         </div> 
 
+
         <section className={style.intro}>
           <p>SynolisVA é uma poderosa infiltração intra-articular 
             &#x00028;viscossuplementação&#x00029; com tecnologia única, a qual é 
@@ -70,12 +84,13 @@ export default function Synolis() {
           </div>
         </section>
 
+
         <section className={style.disease}>
           <div className={style.rowImage}>
             <Image
                 src="/images/knee.jpg"
-                width="456"
-                height="456"
+                width="400"
+                height="400"
                 alt="Synolis logo"
                 className={style.knee}
               />
@@ -87,6 +102,7 @@ export default function Synolis() {
             Osteoartrose
           </h2>
         </section>
+
 
         {openInfoDisease === true && (
             <section className={style.box}>
@@ -119,13 +135,13 @@ export default function Synolis() {
                   </p>
                   <div className={style.symptoms}>
                     <p>Sintomas</p>
-                    <div className={style.more}>
+                    <div className={style.more} onClick={() => handleSymptoms()}>
                       <Plus size={25} />
                     </div>
                   </div>
-                  <div className={style.factors}>
+                  <div className={style.factors} >
                     <p>Fatores Atribuídos</p>
-                    <div className={style.more}>
+                    <div className={style.more} onClick={() => handleFactors()}>
                       <Plus size={25}/>
                     </div>
                   </div>
@@ -145,13 +161,43 @@ export default function Synolis() {
             </section>
           )}
 
+          <div className={isSymptomsOpen}>
+            <div className={style.contentSymptoms}>
+              <X className={style.closeSymptoms} size={30} onClick={() => handleSymptoms()} />
+              <h2>Sintomas da Osteoartrite</h2>
+              <ul>
+                <li>Rigidez matinal e limitação dos movimentos;</li>
+                <li>Instabilidade da articulação acometida;</li>
+                <li>Sensação de calor na articulação;</li>
+                <li>Dor que aumenta quando em atividade, mas melhora um pouco com repouso.</li>
+              </ul>
+              <p>Quando houver suspeitas e/ou apresentar alguns dos sintomas, procure imediatamente seu médico</p>
+            </div>
+          </div>
+
+          <div className={isFactorsOpen}>
+            <div className={style.contentFactors}>
+              <X className={style.closeFactors} size={30} onClick={() => handleFactors()} />
+              <h2>Fatores Atribuídos à Osteoartrite</h2>
+              <ul>
+                <li>Idade;</li>
+                <li>Deficiência Óssea;</li>
+                <li>Lesões provocadas por atividades esportivas e acidentes;</li>
+                <li>Obesidade / Excesso de carga de peso;</li>
+                <li>Doenças metabólicas ou endócrinas.</li>
+              </ul>
+              <p>Quando houver suspeitas e/ou apresentar alguns dos sintomas, procure imediatamente seu médico</p>
+            </div>
+          </div>
+
+
         <section className={style.treatment}>
           <h2>Tratamento</h2>
           <div className={`${style.rowImage} ${style.rowImage2}`}>
             <Image
                 src="https://images.unsplash.com/photo-1483721310020-03333e577078?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80"
-                width="456"
-                height="456"
+                width="400"
+                height="400"
                 alt=""
                 className={style.knee}
               />
@@ -159,6 +205,7 @@ export default function Synolis() {
               <Plus size={70} className={style.plus} onClick={() => handleBoxInfoTreat()} />         
           </div> 
         </section>
+        
 
         {openInfoTreat === true && (
             <section className={style.box}>
@@ -188,6 +235,7 @@ export default function Synolis() {
               </p>
             </section>
           )}
+
 
         <section className={style.synolisContent}>
           <p>
@@ -236,6 +284,8 @@ export default function Synolis() {
             seus condrócitos, e devolver ao paciente a melhor qualidade de vida. 
           </p>
         </section>
+
+
         <p className={style.source}><span>Fonte: </span>synolis.com/pt-br/</p>
       </>   
   )
