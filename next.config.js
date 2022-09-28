@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  images: {
+    domains: ['images.unsplash.com']
+  },
   env: {
     SERVICE_ID_EMAILJS: 'service_6fcwqnv',
     TEMPLATE_ID_EMAILJS: 'template_c7g9zql',

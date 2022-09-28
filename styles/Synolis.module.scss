@@ -34,3 +34,188 @@
   }
 }
 
+.cheetah {
+  width: 1220px;
+  height: 332px;
+  background-image: url(../public/images/synolis-page.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0 2.5rem;
+
+  .osteo {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 3.75rem;
+    line-height: 4.375rem;
+    text-align: center;
+    letter-spacing: 0.005em;
+    margin-right: 20%;
+
+    color: #757474;
+
+    span {
+      color: #E64D35;
+    }
+  }
+}
+
+.intro {
+  display: flex;
+  align-items: flex-end;
+  align-self: flex-end;
+  justify-content: flex-end;
+  text-align: right;
+  background-color: #DA051F;
+  border-radius: 12px;
+  color: #fff;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.375rem;
+  line-height: 1.625rem;
+  text-align: right;
+  letter-spacing: 0.005em;
+  padding: 70px 50px;
+  width: 50%;
+  margin: 50px 10% 100px 10%;
+
+  position: relative;
+
+  p {
+    width: 90%;
+  }
+
+  .package {
+    position: absolute;
+    left: -450px;
+    top: 90px;
+  }
+}
+
+.disease, .treatment {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  gap: 50px;
+
+  .rowImage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    outline: 6px solid #DA051F;
+    padding: 6px;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      content: '';
+      z-index: 2;
+      position: absolute;
+      background-color: #DA051F;
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      right: 0;
+      top: 0;
+      transition: all ease 0.2s;
+    }
+
+    p {
+      position: absolute;
+      top: -40px;
+      right: -60px;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 29px;
+      line-height: 34px;
+      letter-spacing: -0.025em;
+      color: #DA051F; 
+    }
+
+    .plus {
+      position: absolute;
+      right: 4%;
+      top: 4%;
+      z-index: 3;
+      color: #fff;
+      cursor: pointer;
+
+      transition: all ease 0.2s;
+
+      &:hover {
+        transform: scale(.9);
+      }
+    }
+
+    .knee {
+      object-fit: cover;
+      clip-path: circle(50% at 50% 50%);        
+    }
+  }
+
+  .rowImage2 {
+    &::before {
+      left: 0;
+      top: 0;
+    }
+
+    p {
+      top: -40px;
+      left: -60px;
+    }
+
+    .plus {
+      top: 4%;
+      left: 4%;
+    }
+  }
+
+  h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 90px;
+    line-height: 105px;
+    text-align: right;
+    letter-spacing: -0.025em;
+    color: #49494A;
+  }
+}
+
+.synolisContent {
+  width: 90%;
+  margin: 20px auto;
+  background-color: #DA051F;
+  border-radius: 12px;
+  padding: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  color: #fff;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  letter-spacing: -0.025em;
+
+  color: #FFFFFF;
+
+  .synolisVideo {
+    border-radius: 12px;
+  }
+}
+
+.source {
+  align-self: flex-end;
+  padding-right: 100px;
+
+  span {
+    font-weight: 500;
+  }
+}
+
