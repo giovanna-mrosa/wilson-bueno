@@ -52,6 +52,9 @@ export function FormContact() {
         id="message" 
         cols="30" 
         rows="10" 
+        placeholder="Olá,
+        
+        Gostaria de saber mais sobre o Synolis."
       />
       <button value="Send" type="submit">ENVIAR</button>
     </form>

@@ -245,6 +245,23 @@
     letter-spacing: -0.025em;
     color: #DA051F;
   }
+
+  .treatamentContent {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 40px;
+    
+    p {
+      width: 50%;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 23px;
+      letter-spacing: -0.025em;
+      color: #49494A;
+    }
+  }
 }
 
 .synolisContent {

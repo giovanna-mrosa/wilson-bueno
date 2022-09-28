@@ -162,7 +162,7 @@ export default function Synolis() {
 
         {openInfoTreat === true && (
             <section className={style.box}>
-              <div className="treatamentContent">
+              <div className={style.treatamentContent}>
                 <p>
                   Sempre será o médico que determinará o tratamento mais adequado. 
                   Dentro das opções propostas, a viscossuplementação com ácido 

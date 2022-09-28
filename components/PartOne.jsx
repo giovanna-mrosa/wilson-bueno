@@ -44,7 +44,7 @@ export default function PartOne() {
       <Image 
           src="/images/synolis-logo.svg"
           width="385"
-          height="70"
+          height="65"
           alt="Synolis logo"
           className={style.logoSynolis}
         />
