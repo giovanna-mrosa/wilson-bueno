@@ -144,10 +144,12 @@
       color: #fff;
       cursor: pointer;
 
-      transition: all ease 0.2s;
+      animation: scale .9s infinite;
 
-      &:hover {
-        transform: scale(.9);
+      @keyframes scale {
+        0% {transform: scale(.9);}
+        50% {transform: scale(1);}
+        100% {transform: scale(.9);}
       }
     }
 
@@ -185,6 +187,66 @@
   }
 }
 
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  margin: 20px auto;
+  background-color: #ddd;
+  border-radius: 12px;
+  padding: 55px;
+
+  .diseaseContent {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 40px;
+
+    .diseaseContentText {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 23px;
+      letter-spacing: -0.025em;
+      color: #49494A;
+
+      .symptoms, .factors {
+        font-size: 22px;
+        font-weight: 500;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+
+        .more {
+          padding: 5px;
+          background-color: #DA051F;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .warning {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: -0.025em;
+    color: #DA051F;
+  }
+}
+
 .synolisContent {
   width: 90%;
   margin: 20px auto;
@@ -213,6 +275,7 @@
 .source {
   align-self: flex-end;
   padding-right: 100px;
+  margin: -10px 0 10px 0;
 
   span {
     font-weight: 500;
