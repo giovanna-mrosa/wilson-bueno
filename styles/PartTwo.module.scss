@@ -190,22 +190,15 @@
 
     .sectionThree {
       gap: 2.125rem;
+      padding: .875rem 1rem 0 1rem;
 
-      .testimony {
-        width: 22rem;
-        height: 19rem;
-
-        h3 {
-          font-size: 1.5rem;
-        }
-
-        p {
-          font-size: 1.125rem;
-        }
+      .obs {
+        font-size: 24px;
+        line-height: 30px;
       }
 
       .videoBox iframe {
-        width: 24rem !important;
+        width: max-content !important;
       }
     }    
   }
