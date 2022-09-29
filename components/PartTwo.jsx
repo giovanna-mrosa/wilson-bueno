@@ -360,8 +360,7 @@ export default function PartTwo() {
       </section>
 
       <section className={style.sectionFour}>
-        <p className={style.obs1}>Ortopedistas, Reumatologistas e Médicos do Esporte, este produto é vendido em nível nacional, quando necessitar dentro dessas regiões, não exite em entrar em contato comigo.</p>
-        {/* <p className={style.obs2}>Caso acredide que esteja com sintomas de Osteoartrite, entre em contato com seu médico.</p> */}
+        <p className={style.obs}>Ortopedistas, Reumatologistas e Médicos do Esporte, este produto é vendido em nível nacional, quando necessitar dentro dessas regiões, não exite em entrar em contato comigo.</p>
       </section>
     </main>
   )
