@@ -345,8 +345,10 @@ export default function Synolis() {
               moleculares, concentrações, componentes, origens, propriedades, uso, 
               resultados e até níveis de satisfação do paciente e do médico. <br />
               <br />
-              O que torna o SynolisVA a melhor e a única opção é a presença de 
-              Sorbitol em sua fórmula. <br />
+              <strong>
+                O que torna o SynolisVA a melhor e a única opção é a presença de
+                Sorbitol em sua fórmula.
+              </strong> <br />
               <br />
               O Sorbitol, em alta concentração, combinado com o ácido hialurônico, 
               também em alta concentração, reage de forma sinérgica e cria um gel de 
