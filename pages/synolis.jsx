@@ -14,6 +14,7 @@ export default function Synolis() {
   const [openInfoVisco, setOpenInfoVisco] = useState(false)
   const [toggleSymptoms, setToggleSymptoms] = useState(false)
   const [toggleFactors, setToggleFactors] = useState(false)
+  const [toggleGraphic, setToggleGraphic] = useState(false)
 
   function handleBoxInfoTreat() {
     setOpenInfoTreat(!openInfoTreat)
@@ -38,6 +39,12 @@ export default function Synolis() {
   }
 
   const isFactorsOpen = toggleFactors === false ? `${style.hiddenOverlay} ${style.overlay}` : style.overlay
+
+  function handleGraphic() {
+    setToggleGraphic(!toggleGraphic)
+  }
+
+  const isGraphicOpen = toggleGraphic === false ? `${style.graphicHiddenOverlay} ${style.graphicOverlay}` : style.graphicOverlay
 
   useEffect(() => {
     if (window.screen.width <= 1024) {
@@ -172,15 +179,15 @@ export default function Synolis() {
                   </p>
                   <div className={style.symptoms}>
                     <p>Sintomas</p>
-                    <div className={style.more} onClick={() => handleSymptoms()}>
+                    <button className={style.more} onClick={() => handleSymptoms()}>
                       <Plus size={25} />
-                    </div>
+                    </button>
                   </div>
                   <div className={style.factors} >
                     <p>Fatores Atribuídos</p>
-                    <div className={style.more} onClick={() => handleFactors()}>
+                    <button className={style.more} onClick={() => handleFactors()}>
                       <Plus size={25}/>
-                    </div>
+                    </button>
                   </div>
                 </div>
                 <Image
@@ -256,34 +263,68 @@ export default function Synolis() {
         
 
         {openInfoTreat === true && (
-            <section className={style.box}>
-              <div className={style.treatamentContent}>
-                <p>
-                  Sempre será o médico que determinará o tratamento mais adequado. 
-                  Dentro das opções propostas, a viscossuplementação com ácido 
-                  hialurônico encontra-se nos tratamentos intra-articulares. Ela 
-                  é um procedimento geralmente rápido e seguro, se feita pelo 
-                  profissional correto, tem um ótimo custo-benefício ao paciente, 
-                  e visa devolver rapidamente a qualidade de vida ao paciente e 
-                  postergar, ou mesmo eliminar a necessidade da cirurgia de 
-                  prótese. Dos profissionais que a utilizam, encontramos 
-                  ortopedistas, reumatologistas, fisiatras, médicos 
-                  intervencionistas da dor e médicos do esporte. 
-                </p>
-                <Image
-                src="/images/gestão-tratamento.svg"
-                width="556"
-                height="424"
-                alt=""
-              />
-              </div>
-              <p className={style.warning}>
-                Quando houver suspeitas e/ou apresentar alguns dos sintomas, 
-                procure imediatamente seu médico
+          <section className={style.box}>
+            <div className={style.treatamentContent}>
+              <p>
+                Sempre será o médico que determinará o tratamento mais adequado. 
+                Dentro das opções propostas, a viscossuplementação com ácido 
+                hialurônico encontra-se nos tratamentos intra-articulares. Ela 
+                é um procedimento geralmente rápido e seguro, se feita pelo 
+                profissional correto, tem um ótimo custo-benefício ao paciente, 
+                e visa devolver rapidamente a qualidade de vida ao paciente e 
+                postergar, ou mesmo eliminar a necessidade da cirurgia de 
+                prótese. Dos profissionais que a utilizam, encontramos 
+                ortopedistas, reumatologistas, fisiatras, médicos 
+                intervencionistas da dor e médicos do esporte. 
               </p>
-            </section>
-          )}
+                {isMobile ? (
+                  <div className={style.imgMobBtn}>
+                    <Image
+                      src="/images/gestão-tratamento-mob.svg"
+                      width="330"
+                      height="274"
+                      alt=""
+                      className={style.graphic}
+                    />
+                    <button onClick={() => handleGraphic()}>
+                      <Plus size={25} />
+                    </button>
+                  </div>
+                ) : (
+                  <Image
+                    src="/images/gestão-tratamento.svg"
+                    width="556"
+                    height="424"
+                    alt=""
+                  />
+                )}   
+              
+            </div>
+            <p className={style.warning}>
+              Quando houver suspeitas e/ou apresentar alguns dos sintomas, 
+              procure imediatamente seu médico
+            </p>
+          </section>
+        )}
 
+        <div className={isGraphicOpen}>
+          <ul>
+            <li><strong>Legenda:</strong></li>
+            <li><strong>AINEs:</strong> Anti-inflamatório não esteríode</li>
+            <li><strong>Capsaicina:</strong> Creme neuropeptídeo</li>
+            <li><strong>Acetaminofeno:</strong> Paracetamol, Tylenol</li>
+            <li>
+              <strong>SYSADOA:</strong> Medicamentos sintomáticos
+              de ação lenta para Osteoartrite (suplemen-
+              tos, glucosamina, condroitina)
+            </li>
+            <li><strong>Opióides:</strong> Tramadol, Morfina</li>
+            <li><strong>Duloxetina:</strong> Oral para dor neuropática</li>
+            <li><strong>AH:</strong> Ácido Hialurônico</li>
+            <X className={style.closeGraphic} size={30} onClick={() => handleGraphic()} />
+          </ul>
+          
+        </div>
 
         <div className={style.line}></div>
 
