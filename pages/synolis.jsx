@@ -87,7 +87,7 @@ export default function Synolis() {
           <p>SynolisVA é uma poderosa infiltração intra-articular 
             &#x00028;viscossuplementação&#x00029; com tecnologia única, a qual é 
             usada para combater os sintomas causados pela Osteoartrite nas 
-            articulações humanas restaurando rapidamente a mobilidade da 
+            articulações humanas, restaurando rapidamente a mobilidade da 
             articulação acometida e promovendo rápida resposta à dor do paciente.
           </p>
           <div className={style.package}>

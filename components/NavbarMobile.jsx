@@ -35,13 +35,13 @@ export default function NavbarMobile() {
               </Link>
             </li>
             <li>
-              <a href="http://localhost:3000/#about">Quem Sou</a>
+              <a href="https://wilson-bueno.vercel.app/#about">Quem Sou</a>
             </li>
             <li>
-              <a href="http://localhost:3000/#where">Onde Me Encontrar</a>
+              <a href="https://wilson-bueno.vercel.app/#where">Onde Me Encontrar</a>
             </li>
             <li>
-              <a className={style.span} href="http://localhost:3000/#talkToMe">Fale Comigo</a>
+              <a className={style.span} href="https://wilson-bueno.vercel.app/#talkToMe">Fale Comigo</a>
             </li>
           </ul>
           
