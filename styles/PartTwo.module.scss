@@ -73,7 +73,7 @@
       transform: translate(-50%, -5%);
       z-index: 9999;
       
-      p{
+      p {
         display: flex;
         align-items: center;
         font-size: 1.5rem;
@@ -222,6 +222,11 @@
         width: 77%;
         word-wrap: break-word;
         font-size: 1rem;
+
+        p {
+          font-size: .875rem;
+          font-weight: 500;
+        }
       }
     }
 
