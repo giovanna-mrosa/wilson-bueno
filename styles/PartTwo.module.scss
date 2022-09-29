@@ -2,92 +2,15 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 3.125rem 1.25rem 1.875rem 1.25rem;
+  padding: 1rem 1.25rem 1.875rem 1.25rem;
   align-items: center;
 
   .sectionOne {
     display: flex;
     width: 100%;
-    gap: 3.125rem;
-    align-items: center;
-    justify-content: center;
-    padding: 0 3.75rem;
-    flex-wrap: wrap;
-    
-
-    .testimony {
-      width: 26rem;
-      background-color: #da051f;
-      border-radius: 18px;
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      color: #fff;
-      padding: 2.81rem 2.19rem;
-      gap: 1.875rem;
-      height: 23.125rem;
-
-      h3 {
-        font-size: 1.81rem;
-        font-weight: 900;
-      }
-      
-      p { 
-        font-size: 1.375rem;
-        margin-bottom: 1.25rem;
-
-        span {
-          font-weight: 700;
-        }
-      }       
-    }
-
-    .videoBox iframe {
-      border-radius: 18px;
-    }
-  }
-
-  .sectionTwo {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    margin: 5rem 0 2rem 0;
-
-    .where {
-      width: max-content;
-      position: absolute;
-      background-color: #da051f;
-      padding: 0.94rem;
-      border-radius: 12px;
-      color: #fff;
-      font-weight: 900;
-      font-size: 1.81rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      bottom: 5%;
-      left: 50%;
-      transform: translate(-50%, -5%);
-      z-index: 9999;
-      
-      p {
-        display: flex;
-        align-items: center;
-        font-size: 1.5rem;
-      }
-    }
-  }
-
-  .sectionThree {
-    display: flex;
-    width: 100%;
     align-items: center;
     justify-content: space-between;
     padding: 0 9.375rem;
-    margin-top: 2.19rem;
     flex-wrap: wrap;
 
     .rowOne {
@@ -179,23 +102,93 @@
     }
   }
 
-  .sectionFour {
-    width: 80%;
-    background-color: #ddd;
-    padding: 1rem 2rem;
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: #49494a;
-    margin-top: 2.5rem;
-    border-radius: 12px;
-    box-shadow: 0px 4px 4px 0px #00000040;
-    text-align: center;
+  .sectionTwo {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 5rem 0 2rem 0;
+
+    .where {
+      width: max-content;
+      position: absolute;
+      background-color: #da051f;
+      padding: 0.94rem;
+      border-radius: 12px;
+      color: #fff;
+      font-weight: 900;
+      font-size: 1.81rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      bottom: 5%;
+      left: 50%;
+      transform: translate(-50%, -5%);
+      z-index: 9999;
+      
+      p {
+        display: flex;
+        align-items: center;
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .sectionThree {
+    display: flex;
+    width: 100%;
+    gap: 3.125rem;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 3.75rem 0 3.75rem;
+    flex-wrap: wrap;
+    
+
+    .obs {
+      text-align: right;
+      color: #49494a; 
+      font-weight: 600;
+      font-size: 35px;
+      line-height: 41px;
+      text-align: right;
+      letter-spacing: -0.025em;  
+
+      .redText {
+        color: #da051f;
+      }
+    }
+
+    .videoBox iframe {
+      border-radius: 18px;
+    }
   }
   
   @media (max-width: 1024px) {
     padding: .875rem 0;
 
     .sectionOne {
+      padding: 0 1.375rem;
+      gap: 2rem;
+      justify-content: center;
+    }
+
+    .sectionTwo {
+      .where {
+        text-align: center;
+        width: 77%;
+        word-wrap: break-word;
+        font-size: 1rem;
+
+        p {
+          font-size: .875rem;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .sectionThree {
       gap: 2.125rem;
 
       .testimony {
@@ -214,30 +207,6 @@
       .videoBox iframe {
         width: 24rem !important;
       }
-    }
-
-    .sectionTwo {
-      .where {
-        text-align: center;
-        width: 77%;
-        word-wrap: break-word;
-        font-size: 1rem;
-
-        p {
-          font-size: .875rem;
-          font-weight: 500;
-        }
-      }
-    }
-
-    .sectionThree {
-      padding: 0 1.375rem;
-      gap: 2rem;
-      justify-content: center;
-    }
-
-    .sectionFour {
-      font-size: 1rem;
-    }
+    }    
   }
 }

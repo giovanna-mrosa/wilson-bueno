@@ -50,99 +50,11 @@ export default function PartTwo() {
 
   return (
     <main className={style.partTwoBox}>
-      <section className={style.sectionOne} id="about">
-        <div className={style.testimony}>
-          <h3>Depoimentos</h3>
-          <div className="carousel-wrapper">
-            <div ref={sliderRef} className="keen-slider">
-              <div className="keen-slider__slide">
-                <p>
-                  “Lorem ipsum dolor sit amet. Est quasi possimus sed
-                  rerum quas quo consequatur quos voluptatem sequi est
-                  voluptates prae sentium ut sunt quisquam non voluptas “ <br />
-                  <br />
-                  <span>Lorem Ipsum Dolor</span>
-                </p>
-              </div>
-              <div className="keen-slider__slide">
-                <p>
-                    “Lorem ipsum dolor sit amet. Est quasi possimus sed
-                    rerum quas quo consequatur quos voluptatem sequi est
-                    voluptates prae sentium ut sunt quisquam non voluptas “ <br />
-                    <br />
-                    <span>Lorem Ipsum Dolor</span>
-                  </p>
-              </div>
-              <div className="keen-slider__slide">
-                <p>
-                  “Lorem ipsum dolor sit amet. Est quasi possimus sed
-                  rerum quas quo consequatur quos voluptatem sequi est
-                  voluptates prae sentium ut sunt quisquam non voluptas “ <br />
-                  <br />
-                  <span>Lorem Ipsum Dolor</span>
-                </p>
-              </div>
-              <div className="keen-slider__slide">
-              <p>
-                “Lorem ipsum dolor sit amet. Est quasi possimus sed
-                rerum quas quo consequatur quos voluptatem sequi est
-                voluptates prae sentium ut sunt quisquam non voluptas “ <br />
-                <br />
-                <span>Lorem Ipsum Dolor</span>
-              </p>
-              </div>
-            </div>
-          </div>          
-        </div>
-        <div className={style.videoBox}>
-          <Image 
-          src="/images/video.jpg"
-          width="560"
-          height="315"
-          alt=""
-          className={style.logoSynolis}
-          />
-        </div>
-      </section>
-
-      <section className={style.sectionTwo} id="where">
-
-      <ComponentMap className={style.homeMap} center={DEFAULT_CENTER} zoom={14}>
-          {({ TileLayer, Marker, Popup }) => (
-            <>
-              <TileLayer
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-              />
-              <Marker position={DEFAULT_CENTER}>
-                <Popup>
-                  A pretty CSS3 popup. <br /> Easily customizable.
-                </Popup>
-              </Marker>
-              <Marker position={anotherPosition}>
-                <Popup>
-                  A pretty CSS3 popup. <br /> Easily customizable.
-                </Popup>
-              </Marker>
-            </>
-          )}
-        </ComponentMap>
-
-        <div className={style.where}>
-          <h3>Onde você encontra SynolisVA na sua cidade</h3>
-          <p>
-            <ArrowUpLeft size={30} />
-            Clique na lupa e busque
-          </p>
-        </div>
-
-      </section>
-
-
-      <section className={style.sectionThree} id="talkToMe">
+      
+      <section className={style.sectionOne} id="talkToMe">
 
         <div className={style.rowOne}>
-           <p>Atuando nas regiões <br />
+           <p>Atendendo nas regiões <br />
             <span className={style.bigGray}>de </span>
             <span className={style.bigRed}>Campinas</span>
             <span className={style.bigGray}>,<br /></span>
@@ -359,9 +271,62 @@ export default function PartTwo() {
         </div>
       </section>
 
-      <section className={style.sectionFour}>
-        <p className={style.obs}>Ortopedistas, Reumatologistas e Médicos do Esporte, este produto é vendido em nível nacional, quando necessitar dentro dessas regiões, não exite em entrar em contato comigo.</p>
+
+      <section className={style.sectionTwo} id="where">
+        <ComponentMap className={style.homeMap} center={DEFAULT_CENTER} zoom={14}>
+          {({ TileLayer, Marker, Popup }) => (
+            <>
+              <TileLayer
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+              />
+              <Marker position={DEFAULT_CENTER}>
+                <Popup>
+                  A pretty CSS3 popup. <br /> Easily customizable.
+                </Popup>
+              </Marker>
+              <Marker position={anotherPosition}>
+                <Popup>
+                  A pretty CSS3 popup. <br /> Easily customizable.
+                </Popup>
+              </Marker>
+            </>
+          )}
+        </ComponentMap>
+
+        <div className={style.where}>
+          <h3>Onde você encontra SynolisVA na sua cidade</h3>
+          <p>
+            <ArrowUpLeft size={30} />
+            Clique na lupa e busque
+          </p>
+        </div>
+
       </section>
+
+
+      <section className={style.sectionThree} id="about">
+        <div className={style.obs}>
+          <p>
+            Synolis<span className={style.redText}>VA</span> está disponível <br /> 
+            em <span className={style.redText}>nível nacional</span>, e <br />
+            distribuído pelos <br />
+            representantes <span className={style.redText}>da Dermhalys</span>. <br /> 
+            Entre em contato para <br /> 
+            <span className={style.redText}>mais informações</span>!
+          </p>          
+        </div>
+        <div className={style.videoBox}>
+          <Image 
+          src="/images/video.jpg"
+          width="560"
+          height="315"
+          alt=""
+          className={style.logoSynolis}
+          />
+        </div>
+      </section>     
+
     </main>
   )
 }

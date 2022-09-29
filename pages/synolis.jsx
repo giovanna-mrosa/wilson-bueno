@@ -142,8 +142,8 @@ export default function Synolis() {
               <Plus size={isMobile ? 50 : 70} className={style.plus} onClick={() => handleBoxInfoDisease()} />
           </div>
           <h2>Artrose, <br />
-            Osteoartrite ou <br />
-            Osteoartrose
+          Osteoartrose ou <br />
+          Osteoartrite  
           </h2>
         </section>
 

@@ -24,7 +24,13 @@ export default function PartOne() {
       }      
       <section className={style.columnOne}>
         <div className={style.about}>
-          <p><span>Atuando</span> no mercado farmáceutico há mais de <span>30 anos</span>, atualmente trabalho para a <span>Dermhalys</span>, representante da <span>Aptissen</span> no Brasil<span>.</span></p>
+          <p>
+            <span>Atuando</span> no mercado <br /> 
+            farmacêutico há mais de <br /> 
+            <span>30 anos</span>, trabalho para a <br /> 
+            <span>Dermhalys</span>, representante da <br /> 
+            <span>Aptissen</span> no Brasil<span>.</span>
+          </p>
           <div className={style.btnCompanies}>
             <a target="_blank" rel="noreferrer" href="https://dermhalys.com.br/">Conheça a Dermhalys</a>
             <a target="_blank" rel="noreferrer" href="https://aptissen.com/">Conheca a Aptissen</a>
